@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/output.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="w-full">
+        <div class="p-4 flex justify-between gap-28 border-[1px] bg-white border-gray">
+            <div class="logo flex flex-row gap-4 items-center ">
+                <div class="w-12">
+                    <img src="../public/img/logo.png" class="w-full h-8 " alt="logo img">
+                </div>
+                <h1 class="capitalize text-1xl font-bold font-sans">cleopatra</h1>
+                <button id="sliderBtn" class="flex-none text-right mt-[3px] text-gray-900 hidden md:block">
+                    <i class="fa fa-list-ul"></i>
+                </button>
+            </div>
+            <div class="flex justify-between w-full md:w-auto">
+                <div class="flex gap-2 items-center h-full text-gray md:hidden">
+                    <a><i class="fa-solid fa-envelope-open-text"></i></a>
+                    <a><i class="fa-solid fa-message"></i></a>
+                    <a><i class="fa-solid fa-circle-check"></i></a>
+                    <a><i class="fa-solid fa-calendar"></i></a>
+                </div>
+                <button class="flex items-center gap-2">
+                    <div class="flex gap-4 items-center">
+                        <div class=" flex gap-4 sm:hidden items-center h-full text-gray">
+                            <a href="#"><i class="fa-solid fa-comments"></i></a>
+                            <a href="#"><i class="fa-solid fa-bell"></i></a>
+                        </div>
+                        <div class="w-8 h-8 overflow-hidden  rounded-full">
+                            <img src="../public/img/user.svg" alt="user image" class="h-full w-full object-cover">
+                        </div>
+                        <p class="sm:hidden capitalize">pratik <i class="fa-solid fa-angle-down"></i></p>
+                </button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="flex w-full">
+        <aside id="aside"
+            class="flex flex-col px-8  h-screen overflow-x-auto bg-white  border-gray-300      border-gray-300 p-2 flex-none  md:fixed md:top-0 md:z-40 md:h-full md:shadow-xl   md:ease-in-out md:duration-500  md:translate-x-[-380px]  top-0 left-0 z-40 ">
+            <button id="sliderCloseBtn" class="absolute right-2 top-2 text-1xl hidden"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="w-full flex-col pt-5  ">
+                <div class="w-full flex flex-col   gap-4">
+                    <h2 class="uppercase text-sm text-gray">homes</h2>
+                    <ul class="text-sm font-sans font-normal flex flex-col gap-y-3 capitalize  cursor-pointer">
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-chart-pie mr-2"></i> analytics
+                            dashboard</li>
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-cart-shopping mr-2"></i> ecommerce
+                            dashboard</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full flex-col  pt-5">
+                <div class="w-full flex flex-col gap-4">
+                    <h2 class="uppercase text-sm text-gray">apps</h2>
+                    <ul class="text-sm font-sans font-normal flex flex-col gap-y-3 capitalize cursor-pointer">
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-envelope mr-2"></i> email</li>
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-comments mr-2"></i> chat</li>
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-check mr-2"></i> todo</li>
+                        <li class="hover:text-hover-green"><i class="fa-regular fa-calendar mr-2"></i> calendar</li>
+                        <li class="hover:text-hover-green"><i class="fa-regular fa-file-lines mr-2"></i> invoice</li>
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-folder mr-2"></i> file manager</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full flex-col  pt-5 ">
+                <div class="w-full flex flex-col gap-4">
+                    <h2 class="uppercase text-sm text-gray">ui elements</h2>
+                    <ul class="text-sm font-sans font-normal flex flex-col gap-y-3 capitalize cursor-pointer">
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-t mr-2"></i>typography</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-swatchbook text-xs mr-2"></i>alerts</li>
+                        <li class="hover:text-hover-green"><i class="fa-solid fa-play mr-2"></i>buttons</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-box text-xs mr-2"></i> content</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-swatchbook text-xs mr-2"></i> colors</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-atom text-xs mr-2"></i> icons</li>
+                        <li class="hover:text-hover-green"><i class="fa-regular fa-credit-card mr-2"></i> card</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-cheese text-xs mr-2"></i> widgets</li>
+                        <li class="hover:text-hover-green"><i class="fa fa-computer text-xs mr-2"></i>components</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <main class="w-[100%] md:w-full bg-light-blue  p-8 z-10" id="main1">
+            <div class="w-full sm:flex sm:flex-col grid  md:grid-cols-2 grid-cols-2 xl:grid-cols-2 gap-8 h-auto ">
+                <div
+                    class="flex flex-col bg-white w-full  p-6  h-[170px]  gap-10 rounded-md border-[1px] border-gray border-opacity-30 ease-linear delay-200 hover:h-[177px]   hover:shadow-xl ">
+                    <div class="flex justify-between items-center ">
+                        <div><i class="fa-solid fa-cart-shopping mr-2 text-2xl text-light-purple"></i></div>
+                        <div class="pt-1 pr-2 pb-1 pl-3 bg-hover-green text-white text-xs rounded-3xl"><span
+                                class="mr-2">12%</span><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                    <div class="text-2xl relative">
+                        <div class="font-medium">1352</div>
+                        <div class="capitalize text-sm text-gray">items sales</div>
+                        <div
+                            class="w-full p-2 bg-white -z-10 absolute bottom-[-28px] rounded-md border-[1px] border-gray border-opacity-30">
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div
+                    class="flex flex-col bg-white p-6 w-full h-[170px] gap-10 rounded-md border-[1px] border-gray border-opacity-30 ease-linear delay-200 hover:h-[177px]   hover:shadow-xl ">
+                    <div class="flex justify-between items-center">
+                        <div><i class="h6 text-dark-light-red mr-2 text-2xl fa fa-store"></i></div>
+                        <div class="pt-1 pr-2 pb-1 pl-3 bg-hover-green text-white text-xs rounded-3xl"><span
+                                class="mr-2">12%</span><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                    <div class="text-2xl relative">
+                        <div class="font-medium">1352</div>
+                        <div class="capitalize text-sm text-gray">items sales</div>
+                        <div
+                            class="w-full p-2 bg-white -z-10 absolute bottom-[-28px] rounded-md border-[1px] border-gray border-opacity-30">
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div
+                    class="flex flex-col bg-white p-6 w-full h-[170px] gap-10 rounded-md border-[1px] border-gray border-opacity-30 ease-linear delay-200 hover:h-[177px]   hover:shadow-xl ">
+                    <div class="flex justify-between items-center">
+                        <div><i class="h6 text-yellow-600 text-2xl fa text-dark-yellow fa-sitemap "></i></div>
+                        <div class="pt-1 pr-2 pb-1 pl-3 bg-hover-green text-white text-xs rounded-3xl"><span
+                                class="mr-2">12%</span><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                    <div class="text-2xl relative">
+                        <div class="font-medium">1352</div>
+                        <div class="capitalize text-sm text-gray">items sales</div>
+                        <div
+                            class="w-full p-2 bg-white -z-10 absolute bottom-[-28px] rounded-md border-[1px] border-gray border-opacity-30">
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div
+                    class="flex flex-col bg-white p-6 w-full h-[170px] gap-10 rounded-md border-[1px] border-gray border-opacity-30 ease-linear delay-200 hover:h-[177px]   hover:shadow-xl ">
+                    <div class="flex justify-between items-center">
+                        <div><i class="h6 text-dark-green text-2xl fa fa-users"></i></div>
+                        <div class="pt-1 pr-2 pb-1 pl-3 bg-hover-green text-white text-xs rounded-3xl"><span
+                                class="mr-2">12%</span><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                    <div class="text-2xl relative">
+                        <div class="font-medium">1352</div>
+                        <div class="capitalize text-sm text-gray">items sales</div>
+                        <div
+                            class="w-full p-2 bg-white -z-10 absolute bottom-[-28px] rounded-md border-[1px] border-gray border-opacity-30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="w-full flex gap-8 mt-8 lg:flex-col">
+                <div class="w-1/2 lg:w-full bg-hover-green p-8 rounded-md flex gap-8 h-full">
+                    <div class="sm:hidden block" >
+                        <img src="../public/img/happy.svg" class="w-48" alt="name image">
+                    </div>
+                    <div class="text-white flex flex-col gap-4">
+                        <div>
+                            <h3 class="capitalize text-xl font-medium">good job,pratik!</h3>
+                            <p class="text-sm">You've Finished All Of Your Tasks For This Week.</p>
+                        </div>
+                        <div>
+                            <ul class="capitalize">
+                                <li><i class="fa fa-check-double mr-2 mb-2 text-light-green"></i> Finish Dashboard
+                                    Design</li>
+                                <li><i class="fa fa-check-double mr-2 mb-2 text-light-green"></i> Fix Issue #74</li>
+                                <li><i class="fa fa-check-double mr-2 mb-2  text-light-green"></i> Publish Version 1.0.6
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 flex flex-col gap-8 lg:w-full   h-full">
+                    <div class="bg-light-gray text-white p-4 rounded-md">
+                        <h1 class="capitalize">Hi! Wait A Minute . . . . . . Follow Me On Twitter @pratik</h1>
+                    </div>
+                    <div class="flex gap-8 md:flex-col">
+                        <div id="chart1" class="w-1/2 md:w-full border-[1px] bg-white border-gray border-opacity-30 rounded-md ">
+                            <div class="w-full flex items-center justify-between p-2">
+                                <div>
+                                    <div class="font-medium text-2xl ">1284k</div>
+                                    <div class="capitalize text-sm  text-gray">view users</div>
+                                </div>
+                                <div
+                                    class="bg-hover-green  text-light-green flex items-center p-4 text-sm rounded-full ">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chart2" class="w-1/2 md:w-full border-[1px] bg-white border-gray border-opacity-30 rounded-md ">
+                            <div class="w-full flex items-center justify-between p-2">
+                                <div>
+                                    <div class="font-medium text-2xl ">84k</div>
+                                    <div class="capitalize text-sm  text-gray">unique users</div>
+                                </div>
+                                <div
+                                    class="bg-light-purple2  text-purple-dark flex items-center p-4 text-sm rounded-full ">
+                                    <i class="fa-solid fa-people-group"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="sales-overview bg-white mt-8 rounded-xl ">
+                <div class="flex justify-between p-8  border-[1px] rounded-t-md bg-white border-gray border-opacity-30">
+                    <h3 class="text-xl font-bold capitalize">sales overview</h3>
+                    <div>
+                        <a href="">
+                            <i class="fa fa-chevron-down mr-6"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="flex lg:flex-col justify-between  w-full  rounded-b-md border-[1px] bg-white border-gray border-opacity-30 ">
+                    <div class="flex w-1/2 lg:w-full  justify-between p-16 flex-col lg:gap-8 gap-24">
+                        <div class="flex flex-col gap-2">
+                            <div class="font-medium text-5xl ">5337</div>
+                            <div class="capitalize text-sm opacity-70">Sales This Month</div>
+                        </div>
+                        <div class="flex flex-col gap-4  md:text-sm">
+                            <div class="flex items-center">
+                                <div class="py-1 px-3 rounded-sm bg-lightest-green mr-4"><i
+                                        class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div>
+                                    <span class="text-hover-green mr-2">54% More Sales</span> <span>In Comparison To
+                                    Last Month.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="py-1 px-3 rounded-sm bg-carret mr-4"><i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <div><span class="text-dark-carret mr-2">75% Revenue Per
+                                    Sale</span><span>In Comparison To Last Month.</span></div>
+                            </div>
+                            <button class="capitalize bg-hover-green p-2 font-medium rounded-md text-white mt-4">view
+                                details</button>
+                        </div>
+                    </div>
+                    <div id="chart3" class="flex w-1/2 md:p-2 md:hidden lg:w-full p-6 justify-between border-opacity-30">
+                    </div>
+                </div>
+
+            </div>
+            <!--  -->
+            <div class="data-cards  flex md:flex-col xl:grid xl:grid-cols-2 sm:flex-col   gap-6 mt-8 capitalize">
+                <div class="w-1/5 xl:w-full flex  items-center p-4  bg-white  gap-4 rounded-md border-[1px] border-gray border-opacity-30 ">
+                    <div class="py-2 px-3 rounded-md bg-dark-purple text-white"><i class="fa fa-wallet"></i></div>
+                    <div>
+                        <div class="font-medium text-md ">52 Sales</div>
+                        <div class="capitalize text-sm  text-gray">38 Payments</div>
+                    </div>
+                </div>
+                <div class="w-1/5 xl:w-full flex items-center p-4  bg-white  gap-4 rounded-md border-[1px] border-gray border-opacity-30 ">
+                    <div class="py-2 px-3 rounded-md bg-dark-green text-white"><i class="fa fa-shopping-cart"></i></div>
+                    <div>
+                        <div class="font-medium text-md ">13 Orders</div>
+                        <div class="capitalize text-sm  text-gray">2 Items</div>
+                    </div>
+                </div>
+                <div class="w-1/5 xl:w-full flex items-center p-4  bg-white  gap-4 rounded-md border-[1px] border-gray border-opacity-30 ">
+                    <div class="py-2 px-3 rounded-md bg-dark-yellow text-white"><i class="fa fa-blog"></i></div>
+                    <div>
+                        <div class="font-medium text-md ">
+                            81 Posts</div>
+                        <div class="capitalize text-sm  text-gray">81 Active</div>
+                    </div>
+                </div>
+                <div class="w-1/5 xl:w-full flex items-center p-4  bg-white  gap-4 rounded-md border-[1px] border-gray border-opacity-30 ">
+                    <div class="py-2 px-3 rounded-md bg-dark-light-red text-white"><i class="fa fa-comments"></i></div>
+                    <div>
+                        <div class="font-medium text-md ">21 Comments</div>
+                        <div class="capitalize text-sm  text-gray">41 Approved</div>
+                    </div>
+                </div>
+                <div class="w-1/5 xl:w-[207%]  flex items-center p-4  bg-white  gap-4 rounded-md border-[1px] border-gray border-opacity-30 ">
+                    <div class="py-2 px-3 rounded-md bg-dark-pink text-white"><i class="fa fa-user"></i></div>
+                    <div>
+                        <div class="font-medium text-md ">53 Memebrs</div>
+                        <div class="capitalize text-sm  text-gray">83 Online</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="flex lg:flex-col mt-8 gap-6 rounded-xl ">
+                <div class="w-1/3 lg:w-full flex flex-col items-center  bg-white  gap-4 rounded-md border-2 border-gray border-opacity-30 ">
+                   <div class="border-b-2  border-gray p-6 border-opacity-30 w-full text-md"><h3>Browser Stats</h3></div>
+                    <div class="border-b-2 flex items-center justify-between border-gray p-6 pt-2 border-opacity-30 w-full text-md capitalize opacity-40 "><h3><i class="fab fa-chrome mr-4"></i>Google Chrome</h3> <div>82%</div></div>
+                    <div class="border-b-2 flex items-center justify-between border-gray p-6 pt-2 border-opacity-30 w-full text-md capitalize opacity-40 "><h3><i class="fab fa-firefox mr-4"></i>Firefox</h3><div>49%</div></div>
+                    <div class="border-b-2 flex items-center justify-between border-gray p-6 pt-2 border-opacity-30 w-full text-md capitalize opacity-40 "><h3><i class="fab fa-internet-explorer mr-4"></i>Internet Explorer</h3><div>23%</div></div>
+                    <div class=" flex items-center justify-between p-6 pt-2 border-opacity-30 w-full text-md capitalize opacity-40 "><h3><i class="fab fa-safari mr-4"></i>Safari</h3><div>18%</div></div> 
+                </div>
+                <div class="w-2/3 lg:w-full flex flex-col  bg-white  rounded-md border-[1px] border-gray capitalize border-opacity-30 ">
+                        <div class=" border-b-2  border-gray p-6 border-opacity-30  text-md">
+                            <h3 class="w-full ">recent sales</h3>
+                        </div>
+                    <table class="w-full  capitalize  bg-white">
+                        <thead>
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30 font-extrabold text-md">
+                                <td class="px-4 py-2   w-1/12   border-r-2 border-gray border-opacity-30"></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2 border-gray border-opacity-30">product</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2 border-gray border-opacity-30">price</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2 border-gray border-opacity-30">date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30   text-md">
+                                <td class=" border-r-2 border-gray border-opacity-30 px-4 py-2 text-center text-dark-green "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">Lightning To USB-C Adapter Lightning.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$90</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">44 Minutes Ago</td>
+                            </tr>
+
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30  text-md">
+                                <td class=" border-r-2 border-gray border-opacity-30 px-4 py-2 text-center text-dark-yellow "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">Apple IPhone 8.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$47</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">95 Minutes Ago</td>
+                            </tr>
+
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30  text-md">
+                                <td class="  border-r-2 border-gray border-opacity-30 px-4 py-2 text-center text-dark-green "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">Apple MacBook Pro.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$4</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">14 Minutes Ago</td>
+                            </tr>
+
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30  text-md">
+                                <td class="  border-r-2 border-gray border-opacity-30 px-4 py-2 text-center text-dark-light-red "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">Samsung Galaxy S9.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$17</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">38 Minutes Ago</td>
+                            </tr>
+
+                            <tr class="w-full border-b-2  border-gray p-6 border-opacity-30 text-md">
+                                <td class="  border-r-2 border-gray border-opacity-30 px-4 py-2 text-center text-dark-yellow "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">	Samsung Galaxy S8 256GB.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$35</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">81 Minutes Ago</td>
+                            </tr>
+
+                            <tr class="w-full   border-gray p-6 border-opacity-30  text-md">
+                                <td class=" text-dark-green  border-r-2 border-gray border-opacity-30 px-4 py-2 text-center "><i class="fa fa-circle"></i></td>
+                                <td class="px-4 py-2  w-5/12   border-r-2  opacity-40 border-gray border-opacity-30">	Apple Watch.</td>
+                                <td class="px-4 py-2   w-3/12   border-r-2  opacity-40 border-gray border-opacity-30">$45</td>
+                                <td class="px-4 py-2   w-3/11   border-r-2  opacity-40 border-gray border-opacity-30">9 Minutes Ago</td>
+                            </tr>
+
+                         
+                        </tbody>
+                      </table>
+                   
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
