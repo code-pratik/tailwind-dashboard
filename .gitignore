@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build files
+/dist/
+/styles/output.css    # Exclude the compiled output CSS file if it's generated
+
+# macOS
+.DS_Store
+
+# IDEs and editors
+.vscode/
+*.code-workspace
+
+# Windows
+Thumbs.db
+
+# Tailwind CSS
+.cache/
